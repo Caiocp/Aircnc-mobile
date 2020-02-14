@@ -10,8 +10,10 @@ export default function Login({ navigation }) {
     const [techs, setTechs] = useState('');
 
     useEffect(() => {
-        AsyncStorage.getItem('user').then( user => {
-            navigation.navigate('List');
+        AsyncStorage.getItem('user').then(user => {
+            if (user) {
+                navigation.navigate('List');
+            }
         })
     }, []);
 

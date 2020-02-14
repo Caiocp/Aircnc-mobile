@@ -12,7 +12,6 @@ function SpotList({ tech, navigation }) {
             const response = await api.get('/spots', {
                 params: { tech }
             })
-            console.log(response.data)
             setSpots(response.data);
         }
 
@@ -99,7 +98,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 2,
-        marginTop: 15
+        marginTop: 15,
+        marginBottom: 20
     },
 
     buttonText: {
